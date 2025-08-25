@@ -6,4 +6,3 @@ def inicio(request):
 def mostrarBienvenida(request):
     tu_nombre = "Benjamin Salazar"
     return HttpResponse(f"¡Bienvenido a mi sitio web, {tu_nombre}!")
- 
