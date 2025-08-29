@@ -1,10 +1,13 @@
 from django.db import models
 #desde django importo modelos
-class Producto(models.Model):
+class Productos(models.Model):
     nombre = models.CharField(max_length=100)
     #defino el campo nombre como un campo de texto con una longitud máxima de 100 caracteres
     precio = models.DecimalField(max_digits=6,decimal_places=2)
     #defino el campo precio como un campo decimal con un máximo de 6 dígitos y 2 decimales
+    descripcion = models.CharField(max_length=100)
+    #defino el campo descripcion como un campo de texto con una longitud máxima de 100 caracteres
+    stock = models.IntegerField()
     
     
     

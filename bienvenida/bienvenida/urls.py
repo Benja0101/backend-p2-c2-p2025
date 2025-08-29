@@ -25,4 +25,8 @@ from django.urls import path
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('inicio/',views.mostrarBienvenida),
+    path('productos/',views.lista_productos),
 ]
+
+#el url.py sirve para definir las rutas de la aplicación web de Django
+# asociando URLs específicas con las vistas correspondientes que manejarán las solicitudes y devolverán respuestas.
