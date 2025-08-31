@@ -23,6 +23,7 @@ from django.urls import path
 
 
 urlpatterns = [
+    path('', views.inicio),
     path('admin/', admin.site.urls),
     path('inicio/',views.mostrarBienvenida),
     path('productos/',views.lista_productos),

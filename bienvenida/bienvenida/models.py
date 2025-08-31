@@ -9,6 +9,7 @@ class Productos(models.Model):
     #defino el campo descripcion como un campo de texto con una longitud máxima de 100 caracteres
     stock = models.IntegerField()
     
+
     
     
     def __str__(self):
