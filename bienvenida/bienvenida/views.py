@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from . import models
 
+
 def inicio(request):
     return HttpResponse("¡Bienvenido a mi sitio web!")
 
@@ -16,4 +17,16 @@ def lista_productos(request):
     #renderizo la plantilla productos.html y le paso el contexto con los productos  
     
     
-#el view sirve para manejar las solicitudes y devolver respuestas en una aplicación web de Django.  
+    
+def CrearProducto(request):
+    if request.method == 'POST':
+        nombre = request.POST.get('nombre')
+        descripcion = request.POST.get('descripcion')
+        precio = request.POST.get('precio')
+        stock = request.POST.get('stock')
+        nuevo_producto = models.Productos(nombre=nombre, descripcion=descripcion, precio=precio, stock=stock)
+        nuevo_producto.save()
+        return HttpResponse("¡Producto creado exitosamente!")
+    return render(request, 'productos/crear-productos.html')
+
+

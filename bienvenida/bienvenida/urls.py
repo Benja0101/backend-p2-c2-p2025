@@ -27,7 +27,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('inicio/',views.mostrarBienvenida),
     path('productos/',views.lista_productos),
+    path('productos-crear/',views.CrearProducto),
+
 ]
 
 #el url.py sirve para definir las rutas de la aplicación web de Django
-# asociando URLs específicas con las vistas correspondientes que manejarán las solicitudes y devolverán respuestas.
+# asociando URLs específicas con las vistas correspondientes que manejarán las solicitudes y devolverán respuestas. 
