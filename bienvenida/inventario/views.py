@@ -11,7 +11,7 @@ def productoCreate(request):
             return redirect('productos')
     else:
         form = ProductoForm()
-    return render(request, 'productos/crear-producto.html', {'form': form})
+    return render(request, 'inventario/crear-producto.html', {'form': form})
 
 
 def producto_update(request, pk):
@@ -23,12 +23,12 @@ def producto_update(request, pk):
             return redirect('productos')
     else:
         form = ProductoForm(instance=producto)
-    return render(request, 'productos/editar-producto.html', {'form': form})
+    return render(request, 'inventario/editar-producto.html', {'form': form})
 
 
 def producto_list(request):
     productos = Productos.objects.all()
-    return render(request, 'productos/lista-productos.html', {'productos': productos})
+    return render(request, 'inventario/lista-productos.html', {'productos': productos})
 
 
 def producto_eliminar(request, pk):
@@ -36,6 +36,6 @@ def producto_eliminar(request, pk):
     if request.method == 'POST':
         producto.delete()
         return redirect('productos')
-    return render(request, 'productos/eliminar-producto.html', {'producto': producto})
+    return render(request, 'inventario/eliminar-producto.html', {'producto': producto})
 
 

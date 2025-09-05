@@ -18,8 +18,7 @@ Including another URLconf
 from . import views
 
 from django.contrib import admin
-from django.urls import path
-
+from django.urls import path, include
 
 
 urlpatterns = [
@@ -28,6 +27,10 @@ urlpatterns = [
     path('inicio/',views.mostrarBienvenida),
     path('productos/',views.lista_productos),
     path('productos-crear/',views.CrearProducto),
+    path('inventario/', include('inventario.urls')),
+    
+    
+
 
 ]
 
