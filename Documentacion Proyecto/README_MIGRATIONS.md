@@ -29,3 +29,9 @@ python manage.py showmigrations  # Muestra estado de migraciones
 
 ## Propósito:
 Permite mantener la estructura de la base de datos sincronizada entre diferentes entornos (desarrollo, producción) y colaboradores del proyecto.
+
+
+
+
+
+admin123
