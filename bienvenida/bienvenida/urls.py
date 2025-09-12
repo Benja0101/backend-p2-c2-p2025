@@ -27,7 +27,6 @@ urlpatterns = [
     path('inicio/',views.mostrarBienvenida),
     path('productos/',views.lista_productos),
     path('inventario/', include('inventario.urls')),
-    path('productos/crear/', views.CrearProducto, name='crear_producto'),
 
 
 

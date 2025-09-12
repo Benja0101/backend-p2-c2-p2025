@@ -1,23 +1,35 @@
+
 {% extends "inventario/base.html" %}
 
 {% block title %}Lista de Productos{% endblock %}
 
 {% block header %}
-    <h1>Lista de Productos</h1>
+<header class="flex gap-6">
+    <h1 class="text-center my-4">Lista de Productos</h1>
+    <a class="underline" href="{% url 'crear_producto' %}">Crear Producto</a>
 {% endblock %}
 
-{% block content %}
-<section>
-    <h2>Productos disponibles:</h2>
-    <ul>
-    {% for producto in productos %}
-        <li class ="flex flex -col gap-1">
-            <span>{{ producto.nombre }}</span> - <span>{{ producto.precio }}</span> - <span>{{ producto.descripcion }}</span>
-        </li>
-    {% endfor %}
 
-    
-    </ul>
+
+{% block content %}
+<section class="container mt-6">
+    <div class="table-responsive">
+        <div class="row justify-content-center">
+            {% for producto in object_list %}
+            <div class="col-md-5 col-sm-6 mb-4">
+                <div class="border rounded p-3 h-100 bg-light">
+                    <div><strong>Nombre:</strong> {{ producto.nombre }}</div>
+                    <div><strong>Precio:</strong> {{ producto.precio }}</div>
+                    <div><strong>Descripción:</strong> {{ producto.descripcion }}</div>
+                </div>
+            </div>
+            {% empty %}
+            <div class="col-12 text-center">
+                No hay productos registrados.
+            </div>
+            {% endfor %}
+        </div>
+    </div>
 </section>
 {% endblock %}
 
