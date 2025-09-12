@@ -14,11 +14,8 @@ class ProductoForm(forms.ModelForm):
     """
     
     class Meta:
-        # 🎯 Modelo base para el formulario
         model = Productos
-        
         # 📝 Campos que se incluirán en el formulario
-        # Se corresponden con los campos del modelo Productos
         fields = ['nombre', 'descripcion', 'precio', 'stock']
         
         # 🎨 OPCIONAL: Se pueden agregar widgets personalizados
@@ -29,13 +26,7 @@ class ProductoForm(forms.ModelForm):
         #     'stock': forms.NumberInput(attrs={'class': 'form-control'}),
         # }
         
-        # 🏷️ OPCIONAL: Etiquetas personalizadas para los campos
-        # labels = {
-        #     'nombre': 'Nombre del Producto',
-        #     'descripcion': 'Descripción Detallada',
-        #     'precio': 'Precio (€)',
-        #     'stock': 'Cantidad en Stock',
-        # }
+       
 
 # 📝 NOTA: Django automáticamente:
 # - Valida que los campos requeridos no estén vacíos
