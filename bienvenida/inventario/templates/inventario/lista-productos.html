@@ -1,6 +1,26 @@
 {% extends "inventario/base.html" %}
+
 {% block title %}Lista de Productos{% endblock %}
 
-{% block content %}
-
+{% block header %}
+    <h1>Lista de Productos</h1>
 {% endblock %}
+
+{% block content %}
+<section>
+    <h2>Productos disponibles:</h2>
+    <ul>
+    {% for producto in productos %}
+        <li class ="flex flex -col gap-1">
+            <span>{{ producto.nombre }}</span> - <span>{{ producto.precio }}</span> - <span>{{ producto.descripcion }}</span>
+        </li>
+    {% endfor %}
+
+    
+    </ul>
+</section>
+{% endblock %}
+
+
+
+

@@ -3,20 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>
         {% block title %} | Sitio{% endblock %}
     </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #8a8686;
+        }
+        header {
+            background-color: #000000;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
-<header>
-    TITULO DE LA PAGINA BASE
+<header class="header">
+    <nav>
+        <ul style="list-style-type: none; margin: 0; padding: 0; overflow: hidden; background-color: #333;">
+            <li style="float: left;"><a href="/inicio/" style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;">Inicio</a></li>
+            <li style="float: left;"><a href="/inventario/productos/" style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;">Productos</a></li>
+            <li style="float: left;"><a href="/inventario/productos/crear/" style="display: block; color: white; text-align: center; padding: 14px 16px; text-decoration: none;">Crear Producto</a></li>
+        </ul>
+    </nav>
+
+
 </header>
 <body>
     {% block content %}
     {% endblock %}
     <footer>
-        <p>&copy; 2025 Mi Sitio. Todos los derechos reservados.</p>
+        <p>&copy; 2025 Mi Sitio. el que copia es gei.</p>
+        <p> hola te habla lebron games </p>
+
+
     </footer>
 </body>
 </html>
 
-#el base de las demas plantillas
+//el base de las demas plantillas//
